@@ -94,13 +94,16 @@ def addConnection(citibike, origin, destination, duration):
 # ==============================
 
 def totalConnections(analyzer):
- return gr.numEdges(analyzer['graph'])
+    return gr.numEdges(analyzer['graph'])
 
 def totalTrips(analyzer):
- return analyzer['trip']
+    return analyzer['trip']
 
 def totalStations(analyzer):
- return gr.numVertices(analyzer['graph'])
+    return gr.numVertices(analyzer['graph'])
+
+def circularRoute(analyzer):
+    return 
 
 def numSCC(graph, sc):
 """

@@ -116,6 +116,8 @@ while True:
          print("Tiempo de ejecución: " + str(executiontime))
 
     elif int(inputs[0]) == 4:
+        station = input("ingrese la estación: ")
+        time = int(input("Ingrese el tiempo disponible: "))
 
 
     elif int(inputs[0]) == 5:
@@ -125,6 +127,7 @@ while True:
 
 
     elif int(inputs[0]) == 7:
+        
 
 
     elif int(inputs[0]) == 8:    
