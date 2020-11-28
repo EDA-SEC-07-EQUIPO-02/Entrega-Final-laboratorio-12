@@ -60,6 +60,7 @@ def neyAnalyzer():
         citibike['llegada']=m.newmap(numelements=1000, 
                                             maptype='PROBING',
                                             comparefunction=compareRoutes)
+        citibike['años'] = lt.newList(datastructure='SINGLE_LINKED', cmpfunction=compareYears)
                                        
         return citibike
     except Exception as exp:
@@ -158,6 +159,17 @@ def compareRoutes(route1, route2):
     else:
         return -1
 
+def compareAges(year1, year2):
+    """
+    Compara las edades
+    """
+    if (year1 == year2):
+        return 0
+    elif (year1 > year2):
+        return 1
+    else:
+        return -1
+
 # ==============================
 # Funciones req
 # ==============================
@@ -250,11 +262,13 @@ def circularRoute1(analyzer, stationID, time):
 
 
 def circularRoute2(analyzer, stationID, time):
-    analyzer['paths'] = djk.Dijkstra(analyzer['connections'], stationID)
+    citibike'paths'] = djk.Dijkstra(citibike['connections'], stationID)
     djk.hasPathTo
 
 def routeByAge(age):
-    byear = 2020 - age
+    year = 2020 - age
+
+    if 
     
     
     
