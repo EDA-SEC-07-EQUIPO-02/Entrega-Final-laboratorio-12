@@ -81,19 +81,36 @@ def optionTwo():
 
 
 def optionThree():
-    print('Total componentes fuertemente conectados es: ') + str(controller.numSCC(cont,))
-    controller.sameCC( ,station1,station2)       
+    estacion1=input('ingrese estacion 1: ')
+    estacion2=input('ingrese estacion 2: ')
+    respuesta= controller.cantidadDeClustersReq1(cont,estacion1,estacion2)
+    if respuesta[1] is True:
+       print('las estaciones estan en el  mismo cluster')
+    else:
+       print('las estaciones no estan en el mismo cluster')
+    print('el numero de clusters son:' + respuesta[0])
+
+
 def optionfour():
 
+
 def optionfive():
+    print('El top tres de estaciones de salida, llegada y menos usadas respectivamente son: ' + 
+    controller.estacionesCriticasReq3(cont))
 
 def optionsix():
 
 def optionseven():
+    
 
 def optioneight():
-
-
+    latitud1=float(input("Ingrese la latitud 1: "))
+    latitud2=float(input("Ingrese la latitud 2: "))
+    longitud1=float(input("Ingrese la longitud 1: "))
+    longitud1=float(input("Ingrese la longitud 2: "))
+    respuesta=controller.rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2)
+    print(respuesta)
+    
 """
 Menu principal
 """
@@ -119,16 +136,20 @@ while True:
 
 
     elif int(inputs[0]) == 5:
-
-
+        executiontime = timeit.timeit(optionFive, number=1)
+        print("Tiempo de ejecución: " + str(executiontime)) 
+         
     elif int(inputs[0]) == 6:  
 
 
     elif int(inputs[0]) == 7:
-
+        executiontime = timeit.timeit(optionSeven, number=1)
+        print("Tiempo de ejecución: " + str(executiontime)) 
+          
 
     elif int(inputs[0]) == 8:    
-
+        executiontime = timeit.timeit(optionEight, number=1)
+        print("Tiempo de ejecución: " + str(executiontime)) 
 
     else:
         sys.exit(0)
