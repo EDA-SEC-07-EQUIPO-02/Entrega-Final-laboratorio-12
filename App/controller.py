@@ -40,7 +40,7 @@ recae sobre el controlador.
 #  Inicializacion del catalogo
 # ___________________________________________________
 def init():
-    analyzer = model,newAnalyzer()
+    analyzer = model.newAnalyzer()
     return analyzer
 
 
@@ -52,8 +52,8 @@ def loadTrips(citibike):
     for filename in os.listdir(cf.data_dir):
         if filename.endswith('.csv'):
             print('Cargando archivo: ' + filename)
-            loadFile(analyzer, filename)
-    return analyzer
+            loadFile(citibike, filename)
+    return citibike
 
 def loadFile(citibike, tripfile):
     """
@@ -69,20 +69,36 @@ def loadFile(citibike, tripfile):
 #  Funciones para consultas
 # ___________________________________________________
 
-def totalConnections(analyzer):
+def totalConnections(citibike):
     """
     Total de enlaces entre las paradas
     """
-    return model.totalConnections(analyzer)
+    return model.totalConnections(citibike)
 
-def totalTrips(analyzer):
-    return model.totalTrips(analyzer)
+def totalTrips(citibike):
+    return model.totalTrips(citibike)
 
-def totalStations(analyzer):
-    return model.totalConnections(analyzer)
+def totalStations(citibike):
+    return model.totalConnections(citibike)
 
 def numSCC(graph, sc):
     return model.numSCC(graph, sc)
 
 def sameCC(sc, station1, station2):  
     return model.sameCC(sc, station1, station2)  
+    
+ # ___________________________________________________
+#  Funciones req
+# ___________________________________________________
+
+def cantidadDeClustersReq1(citibike, estacion1,estacion2)
+    return model.cantidadDeClustersReq1(citibike, estacion1,estacion2)
+
+
+def estacionesCriticasReq3(citibike):
+    return model.estacionesCriticasReq3(citibike)
+
+def rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2):
+    return model.rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2)
+
+    
