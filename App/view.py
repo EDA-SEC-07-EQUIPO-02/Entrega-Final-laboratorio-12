@@ -91,6 +91,7 @@ def optionsix():
 
 def optionseven():
 
+
 def optioneight():
 
 
@@ -116,9 +117,15 @@ while True:
          print("Tiempo de ejecución: " + str(executiontime))
 
     elif int(inputs[0]) == 4:
-        station = input("ingrese la estación: ")
-        time = int(input("Ingrese el tiempo disponible: "))
-
+        stationID = input("Ingrese el identificador de la estación: ")
+        minTime = int(input("Ingrese el tiempo mínimo disponible en minutos: "))
+        maxTime = int(input("Ingrese el tiempo maximo disponible en minutos: "))
+        time = maxTime - minTime
+        controller.circularRoute(cont, stationID, time)
+        print("Numero de rutas circulares:" + )
+        print("Estación de incio:" + station)
+        print("Estación final:" +  )
+        print("Duración estimada:" + time)
 
     elif int(inputs[0]) == 5:
 
@@ -127,7 +134,8 @@ while True:
 
 
     elif int(inputs[0]) == 7:
-        
+        age = input("Ingrese su edad: ")
+        controller.routeByAge(age)
 
 
     elif int(inputs[0]) == 8:    

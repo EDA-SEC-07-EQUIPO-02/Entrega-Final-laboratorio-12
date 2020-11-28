@@ -102,8 +102,17 @@ def totalTrips(analyzer):
 def totalStations(analyzer):
     return gr.numVertices(analyzer['graph'])
 
-def circularRoute(analyzer):
-    return 
+def circularRoute1(analyzer, stationID, time):
+    analyzer['paths'] = 
+
+def circularRoute2(analyzer, stationID, time):
+    analyzer['paths'] = djk.Dijkstra(analyzer['connections'], stationID)
+    djk.hasPathTo
+
+def routeByAge(age):
+    byear = 2020 - age
+    
+    
 
 def numSCC(graph, sc):
 """

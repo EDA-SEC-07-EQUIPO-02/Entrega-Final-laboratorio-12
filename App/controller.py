@@ -87,5 +87,8 @@ def numSCC(graph, sc):
 def sameCC(sc, station1, station2):  
     return model.sameCC(sc, station1, station2)
 
-def circularRoute(station, time):
-    return model.circularRoute
+def circularRoute(stationID, time):
+    return model.circularRoute(station, time)
+
+def routeByAge(age):
+    return model.routeByAge(age)
