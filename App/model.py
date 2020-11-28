@@ -30,6 +30,7 @@ from DISClib.ADT import list as lt
 from DISClib.DataStructures import listiterator as it
 from DISClib.Algorithms.Graphs import scc
 from DISClib.Algorithms.Graphs import dijsktra as djk
+from DISClib.Algorithms.Graphs import dfs as dfs
 from DISClib.Utils import error as error
 from DISClib.Algorithms.Graphs import scc
 import math as ma
@@ -100,14 +101,15 @@ def addConnection(citibike, origin, destination, duration):
 # Funciones de consulta
 # ==============================
 
-def totalConnections(citibike):
- return gr.numEdges(citibike['graph'])
+def totalConnections(analyzer):
+    return gr.numEdges(analyzer['graph'])
 
-def totalTrips(citibike):
- return citibike['trip']
+def totalTrips(analyzer):
+    return analyzer['trip']
 
-def totalStations(citibike):
- return gr.numVertices(citibike['graph'])
+def totalStations(analyzer):
+    return gr.numVertices(analyzer['graph'])
+
 
 def numSCC(graph, sc):
 """
@@ -243,4 +245,16 @@ def rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2):
             dic.append(keys['vertexB'])
     return Ellegada, Esalida, dic        
 
-     
+def circularRoute1(analyzer, stationID, time):
+    
+
+
+def circularRoute2(analyzer, stationID, time):
+    analyzer['paths'] = djk.Dijkstra(analyzer['connections'], stationID)
+    djk.hasPathTo
+
+def routeByAge(age):
+    byear = 2020 - age
+    
+    
+    
