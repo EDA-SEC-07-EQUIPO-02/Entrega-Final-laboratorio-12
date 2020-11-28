@@ -101,4 +101,10 @@ def estacionesCriticasReq3(citibike):
 def rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2):
     return model.rutaInteresTuristicoReq6(citibike,latitud1,latitud2,longitud1,longitud2)
 
+def circularRoute(stationID, time):
+    return model.circularRoute(station, time)
+
+def routeByAge(age):
+    return model.routeByAge(age)
+
     
